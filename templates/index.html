@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>skripsi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
+      <div class="absolute inset-0 bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+      <div class="relative bg-white px-6 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
+        <div class="mx-auto max-w-md">
+          <div class="">
+            <div class="space-y-6 py-8 leading-7">
+              <p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                      <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                  {% endif %}
+                {% endwith %}
+            </p>
+            {% if data %}
+            <div class="flex">
+                <div class="flex-auto">
+                    <p> Real Image</p>
+                    <img src="{{ url_for('static', filename=data['image']) }}" width="200" height="200">
+                </div>
+                <div class="flex-auto">
+                  <p> Mask Image</p>
+                  <img src="{{ url_for('static', filename=data['mask_image']) }}" width="200" height="200">
+              </div>
+            </div>
+            {% endif %}
+              <p class="font-mono" >Breast Cancer Segmentation</p>
+              
+              <p class="font-mono">Sidang skripsi UNEJ, mahasiswa ilkom angkatan 2017</p>
+              <p class="font-mono">Upload Foto usg cancer</p>
+            </div>
+
+            <div class="flex" >
+              <form method=post enctype=multipart/form-data>
+                <input type=file name=file>
+                <input type=submit value=Upload>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>
