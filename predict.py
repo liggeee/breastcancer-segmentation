@@ -4,7 +4,7 @@ from PIL import Image
 from keras.utils import img_to_array
 from keras.models import load_model
 
-path_model = 'model/model_normal_malignant_mse_1-9_adam_5e-5.h5'
+path_model = 'model/model_normal_malignant_mse_3-7_epoch_100_5e-5.h5'
 # path = 'templates/images/1662436205.1745741.png'
 def predict(path):
     data = np.zeros((1, 128, 128, 1))
