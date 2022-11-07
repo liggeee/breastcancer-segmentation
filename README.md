@@ -9,6 +9,9 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install .
 pip install -r requirments.txt
 ```
 
+# Training Process
+You can see my training  proccess here [Train](https://colab.research.google.com/drive/1iuX9QRu4Y0x4-PG0kRYl6oWCpYL2hMR-?usp=sharing)
+
 # Model
 You can download the model here [Model](https://drive.google.com/file/d/1PFB8AG3NUX8IMp3kBNUXX7XpiXYXeDhc/view?usp=share_link)
 
