@@ -127,10 +127,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
-
-!/templates/index.html
-!templates/images/dist
 templates/images/*.png
-# !templates/images
-model/model_normal_malignant_mse_1-9_adam_5e-5.h5
-model/model_normal_malignant_mse_3-7_epoch_100_5e-5.h5
+model/*.h5
